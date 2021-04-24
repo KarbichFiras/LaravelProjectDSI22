@@ -18,7 +18,7 @@ class CreateServicesTable extends Migration
             $table->string('titre');
             $table->text('description');
             $table->integer('prix');
-            $table->unsignedInteger('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
