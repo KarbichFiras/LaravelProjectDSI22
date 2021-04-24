@@ -80,60 +80,9 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Test :P
-                </div>
-
-                <table>
-                   <thead>
-                        <tr>
-                            <th>Id</th>
-                            <th>Titre</th>
-                            <th>Prix</th>
-                            <th>Quantite</th>
-                        </tr>
-                   </thead>
-                   <tbody>
-                        <?php foreach($products as $product) :?>
-                            
-                            <tr>
-                                <td><?php echo $product["id"] ;?></td>
-                                <td><?php echo $product["titre"] ;?></td>
-                                <td><?php echo $product["prix"] ;?></td>
-                                <td><?php echo $product["quantite"] ;?></td>
-                            </tr>
-
-                        <?php endforeach ?>
-                   </tbody>
- 
-                </table>
                 
-                <hr>
 
-                <h2>Using Blade Engine</h2>
-
-                <table>
-                    <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Titre</th>
-                                <th>Prix</th>
-                                <th>Quantite</th> 
-                            </tr>
-                    </thead>
-                    <tbody>
-                            @foreach($products as $product)
-                                <tr>
-                                    <td>{{ $product['id'] }}</td>
-                                    <td>{{ $product['titre'] }}</td>
-                                    <td>{{ $product['prix'] }}</td>
-                                    <td>{{ $product['quantite'] }}</td>
-                                </tr>
-                            @endforeach
-                    </tbody>
-
-                </table>
-
+                
             </div>
         </div>
     </body>
