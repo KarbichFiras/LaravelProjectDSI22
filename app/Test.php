@@ -11,7 +11,7 @@ class Test extends Model
     }
 
     public function demande_devaluations(){
-        return $this->hasMany('App\Demande_devaluation');
+        return $this->belongsToMany('App\User')->using('App\Demande_devaluation');
     }
 
     public function user(){

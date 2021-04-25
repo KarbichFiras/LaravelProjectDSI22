@@ -38,7 +38,7 @@ class User extends Authenticatable
     ];
 
     public function demande_devaluations(){
-        return $this->hasMany('App\Demande_devaluation');
+        return $this->belongsToMany('App\Test')->using('App\Demande_devaluation');
     }
     
     public function tests(){
