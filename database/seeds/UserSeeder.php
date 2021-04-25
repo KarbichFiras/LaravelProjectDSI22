@@ -1,9 +1,9 @@
 <?php
 
-use App\Demande_devaluation;
+use App\User;
 use Illuminate\Database\Seeder;
 
-class DemandeDevaluationSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class DemandeDevaluationSeeder extends Seeder
      */
     public function run()
     {
-        //factory(Demande_devaluation::class,10)->create();
+        factory(User::class,20)->create();
     }
 }

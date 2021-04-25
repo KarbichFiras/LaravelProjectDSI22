@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Test extends Model
 {
     public function image(){
-        return $this->belongsTo('App\Test');
+        return $this->belongsTo('App\Image');
     }
 
     public function demande_devaluations(){
