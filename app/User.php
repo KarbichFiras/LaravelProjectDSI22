@@ -48,4 +48,7 @@ class User extends Authenticatable
     public function images(){
         return $this->hasMany('App\Image');
     }
+    public function user_roles(){
+        return $this->belongsToMany('App\role')->using('App\user_role');
+    }
 }
