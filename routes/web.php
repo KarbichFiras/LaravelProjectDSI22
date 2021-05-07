@@ -18,3 +18,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/tests', 'TeacherController@tests')->name('tests');
+
+Route::get('/services', 'ServiceController@services')->name('services');
+
