@@ -18,9 +18,14 @@ class CreateRequestsTable extends Migration
             $table->string('title', 50);
             $table->text('description');
             $table->dateTime('deadeline', $precision = 0);
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
+            // ilyes
+
             
+            $table->foreign('user_id')->references('id')
+            ->on('users')->onDelete('restrict')->onUpdate('restrict');
+            // ilyes
         });
     }
 

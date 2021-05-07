@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->binary('enabled');
             $table->rememberToken();
             $table->timestamps();
+            
+            
         });
         DB::table('users')->insert([
             'id' => '1',
