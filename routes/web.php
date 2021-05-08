@@ -19,5 +19,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/tests', 'TeacherController@tests')->name('tests');
 
+
 Route::get('/services', 'ServiceController@services')->name('services');
+
+
+Route::get('/users', 'AdminController@users')->name('users');
+Route::get('/userRoles', 'AdminController@userRoles')->name('userRoles');
 
