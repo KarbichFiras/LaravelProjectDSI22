@@ -25,4 +25,7 @@ Route::get('/services', 'ServiceController@services')->name('services');
 
 Route::get('/users', 'AdminController@users')->name('users');
 Route::get('/userRoles', 'AdminController@userRoles')->name('userRoles');
+// Route::get('/services',function(){
+//     return view('services');
+// }
 

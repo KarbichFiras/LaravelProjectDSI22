@@ -54,4 +54,7 @@ class User extends Authenticatable
     public function Services(){
         return $this->belongsToMany('App\Service');
     }
+    public function Requests(){
+        return $this->hasMany('app\Request');
+    }
 }
