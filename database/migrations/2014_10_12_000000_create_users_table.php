@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('username',50);
-            $table->string('Nom',20);
+            $table->string('nom',20);
             $table->string('prenom',20);
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
             'prenom' => 'hassen',
             'email' => 'hassen@gmail.com',
             'password' => '$2y$10$G1XlJV2hs4qqm6rwX1y4juRQZyETm8uqldyxnL3GVh3d9BILS4FF6',
-            'enabled' => 'true'
+            'enabled' => '1'
 
         ]);
     }
