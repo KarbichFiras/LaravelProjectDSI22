@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\User;
-use App\user_role;
+use App\role_user;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -17,12 +17,30 @@ class AdminController extends Controller
         $this->middleware('auth')->except('userRoles');
         $this->middleware('auth')->except('users');
     }
-    public function users(){
-        $users = User::inRandomOrder()->limit(10)->get();        
-        return view('users' , ['users' => $users]);
+    public function index(){     
+        return view('admin.users.index' , ['users' => User::paginate(15)]);
     }
+    public function create(){     
+        return view('admin.users.create');
+    }
+    public function show($id){
+        $user = User::find($id);
+        return view('admin.users.show', ['user' => $user]);
+    }
+    
     public function userRoles(){
-        $userRoles = user_role::inRandomOrder()->limit(10)->get();        
-        return view('userRoles' , ['user_roles' => $userRoles]);
+        $userRoles = role_user::inRandomOrder()->limit(10)->get();        
+        return view('/userRoles');
+    }
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\User  
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        $data = User::findOrFail($id);
+        $data->delete();
     }
 }

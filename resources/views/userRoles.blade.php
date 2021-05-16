@@ -13,8 +13,8 @@
 				<table class="table">
 				  <thead class="thead-dark">
 				    <tr>
-				      <th>ID no.</th>
-				      <th>Name</th>
+				      <th>user id</th>
+				      <th>role id</th>
 				    </tr>
 				  </thead>
 				  <tbody>

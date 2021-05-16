@@ -4,13 +4,13 @@
 
 use App\role;
 use App\User;
-use App\user_role;
+use App\role_user;
 use Faker\Generator as Faker;
 
-$factory->define(user_role::class, function (Faker $faker) {
+$factory->define(role_user::class, function (Faker $faker) {
     return [
-        'user_id' => User::get('id')->random(),
-        'role_id' => role::get('id')->random(),
+        'user_id' => User::all()->random()->id,
+        'role_id' => role::all()->random()->id,
         'created_at' => now()
     ];
 });

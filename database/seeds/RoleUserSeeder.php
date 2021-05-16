@@ -1,9 +1,9 @@
 <?php
 
-use App\user_role;
+use App\role_user;
 use Illuminate\Database\Seeder;
 
-class UserRoleSeeder extends Seeder
+class RoleUserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,6 @@ class UserRoleSeeder extends Seeder
      */
     public function run()
     {
-        factory(user_role::class,20)->create();
+        factory(role_user::class,20)->create();
     }
 }
